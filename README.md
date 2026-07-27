@@ -28,13 +28,43 @@ This project demonstrates how to refactor a legacy Java application by applying 
 ## Project Structure
 
 ```
-src/main/java/com/biggan
-
-├── interfaces
-├── main
-├── model
-├── repository
-└── service
+src
+└── main
+    └── java
+        └── com
+            └── biggan
+                │
+                ├── demo
+                │   ├── LegacyMain.java
+                │   ├── SRPMain.java
+                │   ├── OCPMain.java
+                │   ├── LSPMain.java
+                │   ├── ISPMain.java
+                │   └── DIPMain.java
+                │
+                ├── model
+                │   ├── Employee.java
+                │   ├── Developer.java
+                │   └── Manager.java
+                │
+                ├── repository
+                │   ├── EmployeeRepository.java
+                │   └── EmployeeRepositoryImpl.java
+                │
+                ├── service
+                │   ├── EmployeeService.java
+                │   └── SearchService.java
+                │
+                ├── interfaces
+                │   ├── Workable.java
+                │   └── Manageable.java
+                │
+                ├── legacy
+                │   └── EmployeeManager.java
+                │
+                ├── exception
+                │
+                └── Main.java
 ```
 
 ---
