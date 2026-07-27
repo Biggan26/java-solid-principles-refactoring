@@ -1,42 +1,44 @@
 package com.biggan.legacy;
 //intentionally written bad code in this file for project testing puspose
 import java.util.ArrayList;
+import java.util.List;
 
 public class EmployeeManager {
 
-    ArrayList<String> employees = new ArrayList<>();
+    private List<String> employees = new ArrayList<>();
 
     public void manageEmployee(int choice, String name, String department, double salary) {
 
         if (choice == 1) {
+
             employees.add(name + "," + department + "," + salary);
-            System.out.println("Employee Added");
-        }
+            System.out.println("Employee Added Successfully.");
 
-        if (choice == 2) {
-            for (String emp : employees) {
-                System.out.println(emp);
+        } else if (choice == 2) {
+
+            for (String employee : employees) {
+                System.out.println(employee);
             }
-        }
 
-        if (choice == 3) {
+        } else if (choice == 3) {
 
             for (int i = 0; i < employees.size(); i++) {
 
                 if (employees.get(i).contains(name)) {
 
                     employees.set(i, name + "," + department + "," + salary);
-
-                    System.out.println("Employee Updated");
+                    System.out.println("Employee Updated Successfully.");
                 }
             }
-        }
 
-        if (choice == 4) {
+        } else if (choice == 4) {
 
-            employees.removeIf(emp -> emp.contains(name));
+            employees.removeIf(employee -> employee.contains(name));
+            System.out.println("Employee Deleted Successfully.");
 
-            System.out.println("Employee Deleted");
+        } else {
+
+            System.out.println("Invalid Choice.");
         }
     }
 }
